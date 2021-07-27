@@ -6,6 +6,7 @@ with open("pools.txt") as f:
     pools = f.read().splitlines()
 
 random.seed(SEED)
+# Number of pools needs to be <= 2080 in order to fit within Python's Mersenne Twister implemetation's period
 random.shuffle(pools)
 
 print(pools)
